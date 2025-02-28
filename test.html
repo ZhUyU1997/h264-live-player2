@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>h264-live-player web client demo</title>
+    </head>
+    <body>
+        <button type="button" id="1">Start Video</button>
+        <button type="button" id="2">Stop Video</button>
+        <button type="button" id="3">Disconnect</button>
+        <br />
+
+        <script type="module" src="/dist/h264-live-player2.js"></script>
+
+        <script type="module">
+            import WSAvcPlayer from '/dist/h264-live-player2.js'
+            var canvas = document.createElement('canvas')
+            document.body.appendChild(canvas)
+
+            // Create h264 player
+            var uri = 'ws://localhost:8889'
+            var wsavc = new WSAvcPlayer(canvas, 'webgl', 1, 35)
+            wsavc.connect(uri)
+
+            document.getElementById('1').addEventListener('click', () => {
+                wsavc.playStream()
+            })
+            document.getElementById('2').addEventListener('click', () => {
+                wsavc.stopStream()
+            })
+            document.getElementById('3').addEventListener('click', () => {
+                wsavc.disconnect()
+            })
+        </script>
+    </body>
+</html>

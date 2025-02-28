@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
     build: {
         lib: {
+            formats: ['es'],
             entry: resolve(__dirname, 'lib/vendor/wsavc/index.ts'),
             name: 'h264-live-player2',
             // the proper extensions will be added

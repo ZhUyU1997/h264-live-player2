@@ -3,7 +3,7 @@ import Shader from './Shader'
 import Texture from './Texture'
 import Script from './Script'
 import WebGLCanvas from './WebGLCanvas'
-import Size from './Size' // Assuming Size is in the parent directory's utils folder
+import Size from './Size'
 
 const vertexShaderScript = Script.createFromSource(
     'x-shader/x-vertex',

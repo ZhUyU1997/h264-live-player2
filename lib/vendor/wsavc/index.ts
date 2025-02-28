@@ -141,7 +141,6 @@ class WSAvcPlayer extends EventEmitter {
     }
 
     playStream() {
-        console.log('131', this)
         const message = 'REQUESTSTREAM '
         this.ws?.send(message)
         log('Sent ' + message)

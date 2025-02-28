@@ -12,15 +12,12 @@
         "format": "prettier . --write"
     },
     "dependencies": {
-        "debug": "^4.4.0",
         "eventemitter3": "^5.0.1",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "sylvester.js": "^0.1.1"
+        "react-dom": "^19.0.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.21.0",
-        "@rollup/plugin-commonjs": "^28.0.2",
         "@types/react": "^19.0.10",
         "@types/react-dom": "^19.0.4",
         "@types/ws": "^8.5.14",
